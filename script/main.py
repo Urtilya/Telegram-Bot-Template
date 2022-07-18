@@ -3,7 +3,7 @@ import telebot
 with open('TOKEN.txt','r') as file:
 	token = file.read()
 
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot(token.strip())
 
 #Это тестовый Эхо бот
 
@@ -15,4 +15,4 @@ def send_welcome(message):
 def echo_all(message):
 	bot.reply_to(message, message.text)
 
-bot.infinity_polling()
+bot.polling(non_stop=True)

@@ -1,10 +1,10 @@
 all: run
 
 build:
-	docker build -t telegram-bot-template
+	docker build -t telegram-bot-template .
 
 run: build
-	docker run --name telegram-bot telegram-bot-template
+	docker run -d --name telegram-bot telegram-bot-template
 
 delete: stop rm-image
 
@@ -17,5 +17,5 @@ rm:
 rm-image: rm
 	docker rmi telegram-bot-template
 
-start: run
+start: stop
 	docker start telegram-bot
