@@ -1,2 +1,6 @@
 # Telegram-Bot-Template
-My person telegram bot
+Мой личный телеграм бот
+
+Для запуска нужно устоновить docker и вписать в в файл TOKEN токен от бота после просто выполнить команду make
+для остановки выполнить команду make stop для повторного запска make start
+для удаление сборки make delete
